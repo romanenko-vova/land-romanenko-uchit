@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  web:
+    build: ./web
+    container_name: romanenko-web
+    env_file:
+      - ./web/.env.production
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+  api:
+    build: ./backend
+    container_name: romanenko-api
+    env_file:
+      - ./backend/.env
+    ports:
+      - "8000:8000"
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: romanenko-nginx
+    volumes:
+      - ./deploy/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./deploy/certs:/etc/letsencrypt:ro
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - web
+      - api
