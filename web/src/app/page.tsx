@@ -10,6 +10,7 @@ import 'swiper/css/effect-coverflow'
 
 export default function Home() {
   const [sending, setSending] = useState(false)
+  const apiBase = (process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' && location.hostname === 'localhost' ? 'http://localhost:8000' : '')) as string
   const heroRef = useRef<HTMLDivElement | null>(null)
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start end', 'end start'] })
   const ySphere1 = useTransform(scrollYProgress, [0, 1], [0, -80])
@@ -21,7 +22,8 @@ export default function Home() {
     setSending(true)
     try {
       // В проде запрос идёт через реверс-прокси на /api
-      await fetch('/api/lead', { method: 'POST', body: form })
+      const url = apiBase ? `${apiBase}/lead` : '/api/lead'
+      await fetch(url, { method: 'POST', body: form })
       alert('Заявка отправлена!')
       ;(e.target as HTMLFormElement).reset()
     } finally {
