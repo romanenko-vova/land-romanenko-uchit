@@ -250,17 +250,17 @@ export default function Home() {
           <div className="rounded-xl border border-white/10 p-6 bg-black/30">
             <div className="text-xl font-semibold">Старт (группа)</div>
             <div className="mt-2 text-white/70">1 занятие в неделю</div>
-            <div className="mt-3 text-2xl font-bold">6 900 ₽/мес</div>
+            <div className="mt-3 text-2xl font-bold">7 900 ₽/мес</div>
           </div>
           <div className="rounded-xl border border-white/10 p-6 bg-black/30">
             <div className="text-xl font-semibold">Про (группа)</div>
             <div className="mt-2 text-white/70">2 занятия в неделю</div>
-            <div className="mt-3 text-2xl font-bold">9 900 ₽/мес</div>
+            <div className="mt-3 text-2xl font-bold">13 900 ₽/мес</div>
           </div>
           <div className="rounded-xl border border-white/10 p-6 bg-black/30">
             <div className="text-xl font-semibold">Индивидуальные</div>
             <div className="mt-2 text-white/70">1‑на‑1, персональная программа</div>
-            <div className="mt-3 text-2xl font-bold">от 20 000 ₽/мес</div>
+            <div className="mt-3 text-2xl font-bold">от 20 000 ₽ за 1 часовое занятие в неделю</div>
           </div>
         </div>
       </section>
