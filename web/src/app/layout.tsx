@@ -19,9 +19,7 @@ export const metadata: Metadata = {
     "Школа Владимира Романенко: учим школьников 12–18 писать Telegram-ботов и веб‑приложения на Django и FastAPI. Онлайн, группы и индивидуально.",
   metadataBase: new URL("https://romanenkouchit.ru"),
   icons: {
-    icon: [
-      { url: "/favicon.png", type: "image/png" },
-    ],
+    icon: "/favicon.ico",
   },
   openGraph: {
     title: "Романенко учит — обучение разработке Telegram-ботов и веб‑приложений",
