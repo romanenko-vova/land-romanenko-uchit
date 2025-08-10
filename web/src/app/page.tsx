@@ -283,7 +283,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
           <div>© {new Date().getFullYear()} Романенко учит</div>
           <div className="text-sm">
-            ИП Романенко Владимир Юрьевич · TG-канал: <a className="underline" href="https://t.me/romanenko_uchit" target="_blank">@romanenko_uchit</a> · ЛС: <a className="underline" href="https://t.me/romanenko_vova" target="_blank">@romanenko_vova</a> · <a className="underline" href="/oferta">Оферта</a>
+            ИП Романенко Владимир Юрьевич · ИНН 420518117820 · TG-канал: <a className="underline" href="https://t.me/romanenko_uchit" target="_blank">@romanenko_uchit</a> · ЛС: <a className="underline" href="https://t.me/romanenko_vova" target="_blank">@romanenko_vova</a> · <a className="underline" href="/oferta">Оферта</a>
           </div>
         </div>
       </footer>
